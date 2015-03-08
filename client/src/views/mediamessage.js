@@ -80,7 +80,7 @@ _kiwi.view.MediaMessage = Backbone.View.extend({
             var that = this;
             var matches = (/reddit\.com\/r\/([a-zA-Z0-9_\-]+)\/comments\/([a-z0-9]+)\/([^\/]+)?/gi).exec(this.url);
 
-            $.getJSON('http://www.' + matches[0] + '.json?jsonp=?', function (data) {
+            $.getJSON('https://www.' + matches[0] + '.json?jsonp=?', function (data) {
                 console.log('Loaded reddit data', data);
                 var post = data[0].data.children[0].data;
                 var thumb = '';
